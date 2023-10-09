@@ -1,0 +1,108 @@
+/* Normalizing */
+img {
+    width: 100%;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Typographic styling */
+  body {
+    font-family: sans-serif;
+  
+  }
+  h1, h2, h3 {
+    color: #666;
+    /* font-weight: normal; */
+  }
+  h1, h2 {
+    text-transform: capitalize;
+  }
+  h1 {
+    font-size: 2.4em;
+  }
+  h2 {
+    font-size: 1.8em;
+  }
+  h3 {
+    text-transform: uppercase;
+  }
+  .description {
+    font-style: italic;
+  }
+  footer p {
+    text-transform: lowercase;
+    font-variant: small-caps;
+  }
+  footer p a {
+    font-variant: normal;
+  }
+  
+  /* Initialize multi-column grid at medium-width breakpoint */
+  @media only screen and (min-width: 44em) {
+    article {
+      display: grid;
+      grid-template-columns: auto auto auto;
+    }
+    header, main, footer {
+      display: grid;
+      grid-template-columns: 30% auto auto;
+      grid-column: 1 / span 3;
+    }
+    header > *, main > *, footer > * {
+      padding: 1vw;
+    }
+    header h1 {
+      grid-column: 2 / span 2;
+    }
+    header img {
+      grid-column: 2 / span 2;
+    }
+    aside {
+      order: -1;
+      align-self: end;
+    }
+    .recipe {
+      grid-column: span 2;
+    }
+    footer img {
+      order: -1;
+      align-self: start;
+    }
+    h1 {
+      margin-bottom: 0;
+    }
+    h1, h2, aside h3 {
+      margin-top: 0;
+    }
+    h2 {
+      margin-bottom: .25em;
+    }
+    p {
+      margin: 0;
+    }
+  
+    /* Display recipe details inline */
+    dl, dt, dd {
+      margin: 0;
+    }
+    dt, dd {
+      display: inline;
+    }
+    dd:first-of-type:after {
+      content: " • "
+    }
+    /* Display recipe ingredients in two columns */
+    ul {
+      -webkit-column-count: 2;
+    }
+    ul li {
+      display: inline-block;
+    }
+  }
+  @media only screen and (min-width: 60em) {
+    body {
+      max-width: 54em;
+      margin: auto;
+    }
+  }

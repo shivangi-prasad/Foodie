@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/profilestyles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <h3>Dashboard</h3>
+            <!-- <p>Projects</p>
+            <p>Users</p> -->
+            <div class="segment-box">
+                <i class="fa-solid fa-circle-plus"></i>
+                <button type="button" onclick="window.location.href='/newrecipe';">Add Recipe</button>
+                <!-- <p>you</p> -->
+            </div>
+            <img src="https://i.pravatar.cc/200" alt="">
+        </div>
+
+        {% for info in data%}
+            <div class="users">
+                <h3 onclick="window.location.href='/recipe/{{info[0]}}';" >{{info[1]}}</h3>
+                <h4> <strong>Author:</strong> {{info[2]}}</h4>
+                <img src="https://generatorfun.com/code/uploads/Random-Food-image-{{info[0]%15+1}}.jpg" alt="chart1">
+            </div>
+        {% endfor %}
+        
+    </div>
+
+    <script src="https://kit.fontawesome.com/8535745612.js" crossorigin="anonymous"></script>
+    <script>
+        function EnterName() {
+            let x = document.getElementById("name").value;
+ 
+            document.getElementById("demo").innerHTML =
+                "Welcome to Geeks For Geeks " + x;
+        }
+    </script>
+</body>
+</html>

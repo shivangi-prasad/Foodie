@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono&display=swap');
+
+*,*:after,*:before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Fragment Mono', monospace;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: #fdfdfd;
+    color: #222;
+}
+.container{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr ;
+    grid-template-rows: repeat(3,1fr) ;
+    gap: 1rem;
+    height: 500px;
+}
+.container > div{
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    padding: 1rem;
+}
+.container .nav{
+    grid-column: span 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+    border-radius: 10px 10px 3px 10px;
+}
+.container .nav >*{
+    height: fit-content;
+    cursor: pointer;
+}
+.container .nav h3{
+    margin-left: 1rem;
+}
+.container .nav p{
+    font-size: 15px;
+}
+.container .nav > p:hover{
+    text-decoration: underline;
+}
+.container .nav .alarm-box{
+    position: relative;
+    transition: all .2s;
+}
+.container .nav .alarm-box:hover{
+    transform: translateY(1px);
+}
+.container .nav .alarm-box >span{
+    position: absolute;
+    background-color: #2f5ab6;
+    color: #f4f4f4;
+    border-radius: 50%;
+    text-align: center;
+    min-width: 16px;
+    min-height: 16px;
+    top: -10px;
+    right: 11px;
+    font-size: .8em;
+    padding: 0 2px;
+    box-shadow: 0 0 0 2.5px #f4f4f4;
+}
+.container .nav .alarm-box >i{
+    font-size: 25px;
+    color: #333;
+    padding: 0 1rem;
+    transition: all .2s;
+}
+.container .nav .alarm-box >i:hover{
+    color: #b3920d;
+}
+.container .nav .segment-box{
+    display: flex;
+    gap: .5rem;
+    background-color: #2f5ab6;
+    padding: 1rem;
+    border-radius: 6px;
+    color: #f4f4f4;
+    transition: all .2s;
+}
+.container .nav .segment-box:hover{
+    background-color: #b3920d;
+}
+.container .nav .segment-box i{
+    font-size: 20px;
+    color: #f4f4f4;
+}
+.container .nav img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    transition: all .3s;
+}
+.container .nav img:hover{
+    box-shadow: 0 0 0 3px #2f5ab6;
+}
+.container .nav .segment-box{
+    margin-left: auto;
+}
+
+
+.container .upgrade{
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 3px 10px;
+}
+.container .upgrade i{
+    font-size: 120px;
+    color: #2f5ab6;
+    margin-bottom: 4rem;
+}
+.container .upgrade h4{
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.container .upgrade h4 span{
+    color: #2f5ab6;
+}
+.container .upgrade button{
+    border: none;
+    background-color: #2f5ab6;
+    color: #f4f4f4;
+    padding: 1rem 5rem;
+    border-radius: 99999px;
+    cursor: pointer;
+    letter-spacing: .6px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all .3s;
+}
+.container .upgrade button:hover{
+    background-color: #b3920d;
+    color: #f4f4f4;
+}
+
+
+.container .users >img , .container .newUsers >img{
+    width: 300px;
+    height: 200px;
+    border-radius: 6px;
+    margin-top: 1rem;
+}
+.container .performance {
+    grid-column: span 2;
+    border-radius: 10px 3px 10px 10px;
+}
+.container .performance .percentages{
+    display: flex;
+    justify-content: space-around;
+    font-size: 13px;
+    position: relative;
+}
+.container .performance .percentages .direct, .container .performance .percentages .Social, .container .performance .percentages .Organic{
+    position: relative;
+}
+.container .performance .percentages span{
+    width: 10px;
+    height: 10px;
+    background-color: #990c0cbd;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -20px;
+}
+.container .performance .percentages .Social > span {
+    background-color: #210c99bd;
+}
+.container .performance .percentages .Organic > span {
+    background-color: #55990cbd;
+}
+
+.container .performance .percentages .direct:before, .container .performance .percentages .Social:before, .container .performance .percentages .Organic:before {
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 12px;
+    background-color: #990c0cbd;
+    top: 30px;
+    left: -23%;
+    border-radius: 0 999999px 0px 0;
+    opacity: 0.8;
+}
+.container .performance .percentages .Social:before{
+    background-color: #210c99bd;
+    width: 110%;
+}
+.container .performance .percentages .Organic:before{
+    background-color: #55990cbd;
+    width: 150%;
+}
+

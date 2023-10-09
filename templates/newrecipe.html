@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with 12 Fields</title>
+    <link rel="stylesheet" href="../static/css/newrecipe.css">
+</head>
+
+<body>
+  {% for message in get_flashed_messages() %}
+    <div class="alert alert-warning">
+        <button type="button">&times;</button>
+        {{ message }}
+    </div>
+    {% endfor %}
+
+
+
+    <div class="form-container">
+        <h1>Hey Chef!🍕 Welcome to Foodie's hub!</h1>
+        <h3>Add your delicious recipe here</h3>
+
+        <form action="/newrecipe" method="post">
+
+            <div>
+              <label class="desc" id="title1" for="Field1">Recipe Name</label>
+              <div>
+                <input id="Field1" name="recipename" type="text" class="field text fn" value="" size="8" tabindex="1">
+              </div>
+            </div>
+              
+            <div>
+              <label class="desc" id="title3" for="Field3">Ingredients</label>
+              <div>
+                <input id="Field3" name="ingredients" type="text" spellcheck="false" value="" maxlength="255" tabindex="3"> 
+             </div>
+            </div>
+
+
+            <div>
+                <label class="desc" id="title106" for="Field106">
+                    Diet
+                </label>
+                <div>
+                <select id="Field106" name="diet" class="field select medium" tabindex="11"> 
+                  <option value="Keto"> Keto </option>
+                  <option value="No Onion No Garlic Sattvic"> No Onion No Garlic Sattvic </option>
+                  <option value="High Protein Vegetarian"> High Protein Vegetarian </option>
+                  <option value="Vegetarian"> Vegetarian </option>
+                  <option value="Diabetic Friendly"> Diabetic Friendly </option>
+                  <option value="Vegan"> Vegan </option>
+                  <option value="Non Vegeterian"> Non Vegeterian </option>
+                  <option value="High Protein Non Vegetarian"> High Protein Non Vegetarian </option>
+                  <option value="Gluten Free"> Gluten Free </option>
+                  <option value="Sugar Free Diet"> Sugar Free Diet </option>
+                  <option value="Eggetarian"> Eggetarian </option>
+                  
+
+                </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="desc" id="title3" for="Field3">Course </label>
+                <div>
+                  <input id="Field3" name="course" type="text" spellcheck="false" value="" maxlength="255" tabindex="3"> 
+               </div>
+              </div>
+
+              <div>
+                <label class="desc" id="title3" for="Field3"> Cuisine </label>
+                <div>
+                  <input id="Field3" name="cuisine" type="text" spellcheck="false" value="" maxlength="255" tabindex="3"> 
+               </div>
+              </div>
+
+
+
+
+              <div>
+                <label class="desc" id="title106" for="Field106">
+                    Servings
+                </label>
+                <div>
+                <select id="Field106" name="servings" class="field select medium" tabindex="11" type="integer" > 
+                  <option value="1"> 1 </option>
+                  <option value="2"> 2 </option>
+                  <option value="3"> 3 </option>
+                  <option value="4"> 4 </option>
+                  <option value="5"> 5 </option>
+                  <option value="6"> 6 </option>
+                  <option value="7"> 7 </option>
+                  <option value="8"> 8 </option>
+                  
+                </select>
+                </div>
+              </div>
+
+              
+            <div>
+              <label class="desc" id="title4" for="Field4"> Cooking Instructions </label>
+              <div>
+                <textarea id="Field4" name="instructions" spellcheck="true" rows="10" cols="50" tabindex="4"></textarea>
+              </div>
+            </div>
+<!-- 
+            <div>
+                <label class="desc" id="title3" for="Field3"> Chef's Name👩🏻‍🍳 </label>
+                <div>
+                  <input id="Field3" name="chef" type="text" spellcheck="false" value="" maxlength="255" tabindex="3"> 
+               </div>
+              </div> -->
+
+
+                <div>
+                    <label class="desc" id="title3" for="Field3"> Cooking Time(in mins) </label>
+                    <div>
+                      <input id="Field3" name="cookingtime" type="integer" spellcheck="false" value="" maxlength="255" tabindex="3"> 
+                   </div>
+                  </div>
+                  <div>
+                    <label class="desc" id="title3" for="Field3">  Recipe Preparation Time (Mins) </label>
+                    <div>
+                      <input id="Field3" name="preptime" type="integer" spellcheck="false" value="" maxlength="255" tabindex="3"> 
+                   </div>
+                  </div>
+
+
+                  <div>
+                    <label class="desc" id="title3" for="Field3"> Recipe Link(if any) </label>
+                    <div>
+                      <input id="Field3" name="link" type="url" spellcheck="false" value="" maxlength="255" tabindex="3"> 
+                   </div>
+                  </div>
+   
+
+            
+              <div>
+                  <div>
+                    <input id="saveForm" name="saveForm" type="submit" value="Add Recipe"> 
+              </div>
+              </div>
+            
+        </form>
+    </div>
+</body>
+
+</html>
+
+
+
+

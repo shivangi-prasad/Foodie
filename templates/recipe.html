@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Display</title>
+    <link rel="stylesheet" href="../static/css/recipestyles.css">
+</head>
+
+<body>
+    <article>
+        <header>
+          <h1>Recipe : {{data[1]}}</h1>
+          <p class="description"></p>
+          <img src="../static/images/jon-tyson-ZA9PHAnVP5g-unsplash.jpg" alt="" />
+        </header>
+        <main>
+          <section class="recipe">
+            <h3>By : {{data[12]}} </h3>
+            <dl>
+              <dt>Total Time : </dt>
+              <dd>{{data[5]}}</dd>
+              <dt>Servings</dt>
+              <dd>{{data[6]}}</dd>
+            </dl>
+            <h3>Ingredients</h3>
+            <ul>
+              <li>{{data[2]}}</li>
+              <!-- <li>1 tablespoon unsalted butter</li>
+              <li>1 tablespoon garlic, chopped</li>
+              <li>3 lb littleneck clams, rinsed</li>
+              <li>1 (14.5-oz) can chicken broth</li>
+              <li>1 cup white wine</li> -->
+            </ul>
+            <h3>Steps</h3>
+            <p> {{data[10]}}</p>
+            <!-- <ol>
+              <li><strong>Preheat</strong> large saute pan on medium. Place butter in pan, then add garlic and clams; cook 2-3 minutes or until garlic becomes fragrant.</li>
+              <li><strong>Add</strong> chicken broth and white wine; cook 6-8 minutes or until liquid is reduced by one-half and clam shells are open. Discard clams that remain closed after cooking.</li>
+            </ol> -->
+            <p><small>Calories (per 1/4 recipe) 160kcal; Fat 4.5g; <abbr title="Cholesterol">Chol</abbr> 40mg; Sodium 570mg; <abbr title="Charbohidrates">Carb</abbr> 5g; Fiber 0g; Protein 14g; <abbr title="Vitamin">Vit</abbr> A 8%; <abbr title="Vitamin">Vit</abbr> C 20%; <abbr title="Calcium">Cal</abbr> 6%; Iron 80%</small></p>
+          </section>
+          <aside>
+            <h3>Other preparation method</h3>
+            <p><strong>Steam: </strong>Bring 2 cups seafood stock to a boil in a large stock pot on high. Place 3 lb rinsed clams in a steamer basket and add to pot. Cover and cook 6-8 minutes or until clams open. Serve with lemon wedges. Discard clams that remain closed after cooking.</p>
+          </aside>
+        </main>
+        <footer>
+          <p>For more recipes, visit <a href="{{data[11]}}"> recipe </a></p>
+          <img src="https://nc.publix.com/img/aprons-recipes.jpg" alt="" />
+        </footer>
+      </article>
+</body>
+
+</html>
